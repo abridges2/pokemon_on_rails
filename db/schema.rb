@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2025_03_06_092218) do
+ActiveRecord::Schema[8.0].define(version: 2025_03_06_100244) do
   create_table "abilities", force: :cascade do |t|
     t.string "name"
     t.string "description"
@@ -64,7 +64,7 @@ ActiveRecord::Schema[8.0].define(version: 2025_03_06_092218) do
     t.float "weight"
     t.integer "base_experience"
     t.string "species"
-    t.string "sprite_urll"
+    t.string "sprite_url"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
