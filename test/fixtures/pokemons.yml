@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  height: 1.5
+  weight: 1.5
+  base_experience: 1
+  species: MyString
+  sprite_urll: MyString
+
+two:
+  name: MyString
+  height: 1.5
+  weight: 1.5
+  base_experience: 1
+  species: MyString
+  sprite_urll: MyString
