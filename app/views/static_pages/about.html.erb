@@ -1,2 +1,20 @@
-<h1>StaticPages#about</h1>
-<p>Find me in app/views/static_pages/about.html.erb</p>
+<div class="container text-center">
+  <div class="row">
+    <div class="col-md-12">
+      <h1 class="text-primary">About Aidan's Pokédex</h1>
+      <p class="lead">
+        This application makes use of data from the <a href="https://pokeapi.co/">PokéAPI</a>
+        to collect and display information related to the original 151 Pokémon from the Kanto region.
+        You can find Pokédex information on any of these Pokémon such as abilities, types, and moves.
+      </p>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <h2>Entity Relationship Diagram</h2>
+      <p>Below is the Entity Relationship Digram that showcases how the data is structured for the Pokédex!</p>
+      <img src="<%= asset_path('pokemon_data_project_ERD.drawio.png') %>" class="img-fluid rounded shadow w-75" alt="Entity Relationship Diagram showcasing pokemon data.">
+    </div>
+  </div>
+</div>
