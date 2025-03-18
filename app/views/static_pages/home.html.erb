@@ -1,4 +1,38 @@
-<div class="container">
-  <h1>Welcome to Aidan's Pokédex!</h1>
-  <p>Here you can explore information on the original 151 Pokémon from the Kanto region.</p>
-</div>
+<div class="container text-center mt-4 p-4 bg-dark rounded-3 shadow-lg">
+  <div class="hero-section">
+    <img src="https://fontmeme.com/permalink/250318/17edcaaf785eaa120337b5d9d8e359e2.png"
+           alt="Aidan's Pokédex Logo"
+           class="img-fluid hero-logo">
+  </div>
+
+
+
+  <div class="row">
+    <h2 class="text-primary text-white">Here you can explore information on the original 151 Pokémon from the Kanto region.</h2>
+  </div>
+
+  <div class="row justify-content-center mt-3">
+
+    <div class="col-md-4">
+      <div class="card shadow text-white bg-dark">
+        <div class="card-body">
+          <h3 class="card-title">View 151 Pokémon</h3>
+          <p class="card-text">Browse through a list of the original 151 Pokémon from the Kanto Region!</p>
+          <%= link_to "Browse Pokédex", "#", class: "btn btn-primary" %>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="card shadow text-white bg-dark">
+        <div class="card-body">
+          <h3 class="card-title">Search Pokémon</h3>
+          <p class="card-text">Search the Pokédex for a specific Pokémon from the Kanto Region!</p>
+          <%= link_to "Search the Dex", "#", class: "btn btn-primary" %>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
