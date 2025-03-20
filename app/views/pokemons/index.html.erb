@@ -1,28 +1,31 @@
 <div class="container bg-dark rounded-3 shadow-lg mt-4 p-4">
   <div class="row">
     <div class="col">
-      <h1 class="text-center text-light mt-3">Welcome to the Pokédex</h1>
-      <h2 class="text-center text-light mt-2">Here you can f</h2>
+      <h1 style="font-family: 'Bangers', sans-serif !important;" class="text-center text-light mt-3">Welcome to the Pokédex</h1>
+      <h2 style="font-family: 'Bangers', sans-serif !important;" class="text-center text-light mt-2 mb-4">Explore the original 151 Pokémon!</h2>
     </div>
   </div>
 
   <div class="row">
     <% count = 1 %>
     <% @pokemons.each do |pokemon|%>
-      <div class="col-12 col-sm-6 col-md-3 mb-4">
+      <%= link_to pokemon_path(pokemon), class: "text-decoration-none card-link col-12 col-sm-6 col-md-3 mb-4" do %>
         <div class="card shadow h-100">
           <div class="card-header">
             <%= count.to_s.rjust(3, '0') %> - <%= pokemon.name.capitalize %>
           </div>
+
           <img src="<%= pokemon.sprite_url %>" class="card-img-top" alt="<%= pokemon.name.capitalize %>">
+
           <div class="card-body text-center">
-            <h3 class="card-title"><%= pokemon.name.capitalize %></h3>
+            <h3 class=" pokemon-name card-title"><%= pokemon.name.capitalize %></h3>
             <% pokemon.types.each do |type|%>
-              <h4 class="card-subtitle"><%= type.name.capitalize %><% unless type == pokemon.types.last %>, <% end %></h4>
+              <h4 class="card-subtitle pokemon-name"><%= type.name.capitalize %><% unless type == pokemon.types.last %>, <% end %></h4>
             <% end %>
           </div>
         </div>
-      </div>
+      <% end %>
+      <% count += 1%>
     <% end %>
   </div>
 </div>

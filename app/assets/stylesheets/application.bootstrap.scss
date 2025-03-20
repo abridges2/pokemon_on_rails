@@ -1,6 +1,12 @@
 @import 'bootstrap/scss/bootstrap';
 @import 'bootstrap-icons/font/bootstrap-icons';
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Pixelify+Sans:wght@400..700&display=swap');
 
-.font-for-browse-dex {
-  font-famil
+
+.pokemon-name {
+  font-family: 'Pixelify Sans', sans-serif !important;
+}
+
+.pokedex-header {
+  font-family: 'Bangers', sans-serif !important
 }
