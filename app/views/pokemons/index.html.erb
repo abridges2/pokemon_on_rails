@@ -8,24 +8,34 @@
 
   <div class="row">
     <% count = 1 %>
-    <% @pokemons.each do |pokemon|%>
-      <%= link_to pokemon_path(pokemon), class: "text-decoration-none card-link col-12 col-sm-6 col-md-3 mb-4" do %>
-        <div class="card shadow h-100">
+    <% @pokemons.each do |pokemon| %>
+      <div class="col-12 col-sm-6 col-md-3 mb-4">
+        <div class="card shadow h-100 pokemon-card">
           <div class="card-header">
             <%= count.to_s.rjust(3, '0') %> - <%= pokemon.name.capitalize %>
           </div>
 
-          <img src="<%= pokemon.sprite_url %>" class="card-img-top" alt="<%= pokemon.name.capitalize %>">
+
+          <%= link_to pokemon_path(pokemon) do %>
+            <img src="<%= pokemon.sprite_url %>" class="card-img-top" alt="<%= pokemon.name.capitalize %>">
+          <% end %>
 
           <div class="card-body text-center">
-            <h3 class=" pokemon-name card-title"><%= pokemon.name.capitalize %></h3>
-            <% pokemon.types.each do |type|%>
-              <h4 class="card-subtitle pokemon-name"><%= type.name.capitalize %><% unless type == pokemon.types.last %>, <% end %></h4>
+            <h3 class="pokemon-name card-title">
+              <%= link_to pokemon.name.capitalize, pokemon_path(pokemon), class: "text-decoration-none text-dark" %>
+            </h3>
+
+
+            <% pokemon.types.each do |type| %>
+              <h4 class="card-subtitle pokemon-name">
+                <%= type.name.capitalize %><% unless type == pokemon.types.last %>, <% end %>
+              </h4>
+
             <% end %>
           </div>
         </div>
-      <% end %>
-      <% count += 1%>
+      </div>
+      <% count += 1 %>
     <% end %>
   </div>
 </div>

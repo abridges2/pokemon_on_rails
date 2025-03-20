@@ -10,3 +10,14 @@
 .pokedex-header {
   font-family: 'Bangers', sans-serif !important
 }
+
+.pokemon-card {
+  transition: transform 0.3s ease-in-out !important;
+
+}
+
+.pokemon-card:hover {
+  transform: scale(1.05) !important;
+  background-color: rgba(255, 255, 255, 0.1) !important;
+  box-shadow: 0 8px 16px rgba(255, 255, 255, 0.2) !important;
+}
